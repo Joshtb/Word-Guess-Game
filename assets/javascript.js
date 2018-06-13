@@ -30,7 +30,7 @@ charArr = newWord.split(" ");
 //underscores
 function startGame() {
     gameRunning = true;
-    clicks;
+    clicks = 20;
     letUsedArr = [];
     underScore = [];
     reset;
@@ -105,9 +105,10 @@ document.getElementById("resetbtn").onclick( function (){
 function checkLoss(){
     if(clicks < 0){
         losses++;
-        alert("Sorry pal, you lost :/ The anwser was " + newWord + "  Hit refresh and try again!")
+        alert("Sorry pal, you lost :/ The anwser was " + newWord + "  Hit a key and try again!")
         document.querySelector("#loss").innerHTML = losses;
         gameRunning = false;
+        startGame();
         
     }
 }
@@ -122,14 +123,15 @@ function checkWin(){
         alert("congrats, youve won!")
         document.querySelector("#wins").innerHTML = wins;
         wins++;
+
         gameRunning = false;
-       
+       startGame();
        
     }
 } 
 function restartGame(){
 //if (gameRunning === false && clicks < 1){
-    console.log("restartGame")
+   restart;
 
      startGame();
 //}
