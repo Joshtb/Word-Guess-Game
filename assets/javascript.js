@@ -30,7 +30,7 @@ charArr = newWord.split(" ");
 //underscores
 function startGame() {
     gameRunning = true;
-    clicks = 20;
+    clicks = 21;
     letUsedArr = [];
     underScore = [];
     reset;
@@ -99,9 +99,8 @@ document.onkeyup = function (letter) {
 
 }
 
-document.getElementById("resetbtn").onclick( function (){
-    restartGame();
-})
+
+
 function checkLoss(){
     if(clicks < 0){
         losses++;
@@ -131,7 +130,7 @@ function checkWin(){
 } 
 function restartGame(){
 //if (gameRunning === false && clicks < 1){
-   restart;
+   
 
      startGame();
 //}
